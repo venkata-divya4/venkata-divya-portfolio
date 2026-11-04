@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Footer from './components/Footer';
 
 /**
  * Root App component
@@ -10,6 +11,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Footer />
     </>
   );
 }
