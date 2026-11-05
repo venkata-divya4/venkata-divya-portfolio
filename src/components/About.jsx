@@ -40,9 +40,9 @@ export default function About() {
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ type: 'spring', stiffness: 110, damping: 9, mass: 1.1 }}
-            className="relative pt-12 flex flex-col items-center"
+            className="relative pt-12 flex flex-col items-center w-full max-w-[280px]"
           >
             {/* Black lanyard string */}
             <div className="absolute -top-32 left-1/2 w-3 h-40 bg-black -translate-x-1/2" />
