@@ -45,7 +45,7 @@ export default function About() {
             className="relative pt-12 flex flex-col items-center"
           >
             {/* Black lanyard string */}
-            <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-3 h-40 bg-black z-0" />
+            <div className="absolute -top-32 left-1/2 w-3 h-40 bg-black -translate-x-1/2" />
 
             {/* Grey clip rectangle */}
             <div className="absolute top-8 left-1/2 -translate-x-1/2 w-8 h-4 bg-gray-400 rounded-sm shadow z-10" />
@@ -229,7 +229,7 @@ export default function About() {
 
         {/* Right: Bio Text Content */}
         <div className="flex-1 space-y-6" data-aos="fade-left">
-          <h2 className="text-4xl md:text-5xl font-black text-black tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-black text-black">
             {aboutContent.heading}
           </h2>
           <p

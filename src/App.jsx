@@ -1,4 +1,5 @@
 // Existing components — always rendered
+import SplashCursor from './components/SplashCursor';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -9,12 +10,13 @@ import Projects from './components/Projects';
 import Internships from './components/Internships';
 import Leadership from './components/Leadership';
 import SoftSkills from './components/SoftSkills';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 // Data arrays — used to conditionally render Internships and Leadership
 import { internshipsList, leadershipList } from './data/portfolioData';
 
-// Components not yet built (IntroVideo, Contact)
+// Components not yet built (IntroVideo)
 // will be imported here in later steps.
 
 /**
@@ -26,6 +28,7 @@ import { internshipsList, leadershipList } from './data/portfolioData';
 function App() {
   return (
     <>
+      <SplashCursor VELOCITY_DISSIPATION={3} SPLAT_FORCE={3500} COLOR_UPDATE_SPEED={18} COLOR="#ffffff" RAINBOW_MODE={false} />
       <Preloader />
       <Navbar />
       <Hero />
@@ -37,7 +40,7 @@ function App() {
       {internshipsList.length > 0 && <Internships />}
       {leadershipList.length > 0 && <Leadership />}
       <SoftSkills />
-      {/* Contact — added in a later step */}
+      <Contact />
       <Footer />
     </>
   );
