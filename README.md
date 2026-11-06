@@ -2,7 +2,7 @@
 
 A modern, high-performance developer portfolio showcasing full-stack web applications, machine learning projects, and software engineering capabilities.
 
-**Live site:** https://YOUR-SITE-URL/
+**Live site:** https://protfolio-beta-brown-33.vercel.app/
 
 ## Tech Stack
 
