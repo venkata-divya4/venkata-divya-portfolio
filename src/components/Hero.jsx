@@ -79,6 +79,12 @@ export default function Hero() {
 
     const handleLoad = () => AOS.refresh();
     window.addEventListener('load', handleLoad);
+
+    // Warm up the video buffer immediately on mount so play starts instantly
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
+
     return () => window.removeEventListener('load', handleLoad);
   }, []);
 
@@ -90,8 +96,14 @@ export default function Hero() {
       videoRef.current.pause();
       setIsPlaying(false);
     } else {
-      videoRef.current.play();
       setIsPlaying(true);
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => {
+          console.error('Video play error:', err);
+          setIsPlaying(false);
+        });
+      }
     }
   }
 
@@ -104,8 +116,10 @@ export default function Hero() {
       {/* object-contain keeps the full portrait visible — never zooms/crops */}
       <video
         ref={videoRef}
+        src={heroVideo}
         className="absolute inset-0 w-full h-full object-contain object-top md:object-right z-0"
         playsInline
+        preload="auto"
         poster={heroPoster}
         onEnded={() => setIsPlaying(false)}
       >

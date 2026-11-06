@@ -40,7 +40,7 @@ export default function About() {
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ type: 'spring', stiffness: 110, damping: 9, mass: 1.1 }}
             className="relative pt-12 flex flex-col items-center w-full max-w-[280px]"
           >
