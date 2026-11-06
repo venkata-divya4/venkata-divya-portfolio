@@ -70,7 +70,7 @@ export default function About() {
                   {/* Profile portrait photo */}
                   <img
                     src={stackImage}
-                    alt={personalInfo.name}
+                    alt="venkata Divya — java full stack developer, TAP Academy student"
                     className="w-full flex-1 rounded-xl object-cover object-top shadow-inner"
                   />
                 </div>
